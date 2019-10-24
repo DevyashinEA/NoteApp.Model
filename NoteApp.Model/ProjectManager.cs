@@ -31,16 +31,25 @@ namespace NoteApp.Model
         public static T Deserializer(string path)
         {
             JsonSerializer serializer = new JsonSerializer();
-
-            //Открываем поток для чтения из файла с указанием пути
-            using (StreamReader sr = new StreamReader(path)
-            )
-            using (JsonReader reader = new JsonTextReader(sr))
+            try
             {
-                serializer.NullValueHandling = NullValueHandling.Include;
-                var data = serializer.Deserialize<T>(reader);
-                return data;
+
+                //Открываем поток для чтения из файла с указанием пути
+                using (StreamReader sr = new StreamReader(path))
+                using (JsonReader reader = new JsonTextReader(sr))
+                {
+                    serializer.NullValueHandling = NullValueHandling.Include;
+                    var data = serializer.Deserialize<T>(reader);
+                    return data;
+                }
             }
-        }
+            catch
+            {
+                return (default(T));
+            }
+
+
+
+}
     }
 }
