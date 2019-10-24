@@ -4,10 +4,10 @@ using NoteApp.Model;
 
 namespace NoteApp.UI
 {
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
         private Project _project = new Project();
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
         }
