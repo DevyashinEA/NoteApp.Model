@@ -1,6 +1,6 @@
 ﻿namespace NoteApp.Model
 {
-    public enum CategoryName
+    public enum NoteCategory
     {
         Job,
         Home,

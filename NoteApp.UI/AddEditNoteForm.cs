@@ -1,18 +1,15 @@
 ﻿using System;
 using System.Windows.Forms;
 using NoteApp.Model;
-
 namespace NoteApp.UI
 {
-    public partial class FormAddEditNote : Form
+    public partial class AddEditNoteForm : Form
     {
-
         public Note NewNote;
-
-        public FormAddEditNote(Note ImportNote)
+        public AddEditNoteForm(Note ImportNote)
         {
             InitializeComponent();
-            foreach (var note in Enum.GetValues(typeof(CategoryName)))
+            foreach (var note in Enum.GetValues(typeof(NoteCategory)))
             {
                 ComboBoxCategory.Items.Add(note);
             }
@@ -20,18 +17,14 @@ namespace NoteApp.UI
             TextBoxName.Text = NewNote.Name;
             TextBoxNote.Text = NewNote.Text;
             ComboBoxCategory.SelectedItem = NewNote.Category;
-            
         }
-
-
         private void OK_Click(object sender, EventArgs e)
         {
             NewNote.Name=TextBoxName.Text;
             NewNote.Text = TextBoxNote.Text;
-            NewNote.Category = (CategoryName)ComboBoxCategory.SelectedItem;
+            NewNote.Category = (NoteCategory)ComboBoxCategory.SelectedItem;
             Close();
         }
-
         private void Cancel_Click(object sender, EventArgs e)
         {
             NewNote = null;

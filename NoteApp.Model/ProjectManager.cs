@@ -1,55 +1,45 @@
 ﻿using System.IO;
 using Newtonsoft.Json;
-
-// ReSharper disable All
-
 namespace NoteApp.Model
 {
     /// <summary>
-    ///     Класс ProjectManager, сериализует и десериализует.
+    /// Класс Сериализации, с помощью которого выполняется загрузка/выгрузка информации в формате JSON.
     /// </summary>
-    public static class ProjectManager<T>
+    public static class ProjectManager
     {
-        /// <summary>
-        ///     Метод, выполняющий сериализацию.
-        /// </summary>
-        public static void Serializer(T name, string path)
+        public static void Serializer(Project project)
         {
+            //Создаём экземпляр сериализатора
             JsonSerializer serializer = new JsonSerializer();
-            using (StreamWriter sw = new StreamWriter(path)
-            )
+            //Открываем поток для записи в файл с указанием пути
+            using (StreamWriter sw = new StreamWriter(@"c:\json.txt"))
             using (JsonWriter writer = new JsonTextWriter(sw))
             {
-                serializer.NullValueHandling = NullValueHandling.Include;
-                serializer.Serialize(writer, name);
+                //Вызываем сериализацию и передаем объект, который хотим сериализовать
+                serializer.Serialize(writer, project);
             }
         }
-
-        /// <summary>
-        ///     Метод, выполняющий десериализацию.
-        /// </summary>
-        public static T Deserializer(string path)
+        public static Project Deserializer()
         {
-            JsonSerializer serializer = new JsonSerializer();
+            //Создаём переменную, в которую поместим результат десериализации
+            Project project = null;
+        //Создаём экземпляр сериализатора
+        JsonSerializer serializer = new JsonSerializer();
+            //Открываем поток для чтения из файла с указанием пути
             try
             {
-
-                //Открываем поток для чтения из файла с указанием пути
-                using (StreamReader sr = new StreamReader(path))
+                using (StreamReader sr = new StreamReader(@"c:\json.txt"))
                 using (JsonReader reader = new JsonTextReader(sr))
                 {
-                    serializer.NullValueHandling = NullValueHandling.Include;
-                    var data = serializer.Deserialize<T>(reader);
-                    return data;
+                    //Вызываем десериализацию и явно преобразуем результат в целевой тип данных
+                    project = (Project)serializer.Deserialize<Project>(reader);
                 }
+                return project;
             }
             catch
             {
-                return (default(T));
+                return new Project();
             }
-
-
-
-}
+        }
     }
 }

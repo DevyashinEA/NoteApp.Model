@@ -1,6 +1,6 @@
 ﻿namespace NoteApp.UI
 {
-    partial class FormAddEditNote
+    partial class AddEditNoteForm
     {
         /// <summary>
         /// Required designer variable.
@@ -60,6 +60,7 @@
             // 
             // OK
             // 
+            this.OK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.OK.Location = new System.Drawing.Point(713, 9);
             this.OK.Name = "OK";
             this.OK.Size = new System.Drawing.Size(75, 23);
@@ -70,6 +71,7 @@
             // 
             // Cancel
             // 
+            this.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Cancel.Location = new System.Drawing.Point(713, 38);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(75, 23);
@@ -82,7 +84,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(807, 450);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.OK);
             this.Controls.Add(this.ComboBoxCategory);
