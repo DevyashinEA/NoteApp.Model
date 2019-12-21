@@ -145,6 +145,7 @@ namespace NoteApp.UI
                     ClearInterface();
                     ProjectManager.Serializer(_project, path);
                 }
+                ComboBoxCategory_SelectedIndexChanged(sender, e);
             }
         }
 
@@ -168,7 +169,6 @@ namespace NoteApp.UI
         {
             int selectedIndexCategory = ComboBoxCategory.SelectedIndex;
             ClearInterface();
-            NoteListBox.Items.Clear();
             if (selectedIndexCategory != -1 && selectedIndexCategory < lenghtEnum + 1)
             {
                 foreach (var note in _project.ListNote.ToArray())
