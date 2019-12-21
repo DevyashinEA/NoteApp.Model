@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteApp.Model", "NoteApp.Mo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteApp.UI", "NoteApp.UI\NoteApp.UI.csproj", "{4D94F6DD-D9E2-4F2D-B05D-635DDF3A167E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{138B06CE-BAA1-4482-B8D2-A0B9CAB3256B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteApp.UnitTest", "UnitTestProject1\NoteApp.UnitTest.csproj", "{138B06CE-BAA1-4482-B8D2-A0B9CAB3256B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

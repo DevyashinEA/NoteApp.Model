@@ -1,5 +1,8 @@
 ﻿namespace NoteApp.Model
 {
+    /// <summary>
+    /// Категория заметки.
+    /// </summary>
     public enum NoteCategory
     {
         Job,
@@ -10,5 +13,4 @@
         Finance,
         Different
     }
-
 }
