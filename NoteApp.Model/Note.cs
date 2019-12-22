@@ -12,7 +12,7 @@ namespace NoteApp.Model
         private NoteCategory _category;
         private string _text;
         private DateTime _dateCreate = DateTime.Now;
-        private DateTime _dateChange;
+        private DateTime _dateChange = DateTime.Now;
 
         /// <summary>
         /// Методы set и get для поля _name.
