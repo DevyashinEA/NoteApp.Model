@@ -126,7 +126,7 @@
             this.TextBoxNote.Multiline = true;
             this.TextBoxNote.Name = "TextBoxNote";
             this.TextBoxNote.Size = new System.Drawing.Size(405, 332);
-            this.TextBoxNote.TabIndex = 28;
+            this.TextBoxNote.TabIndex = 29;
             // 
             // TextBoxName
             // 
@@ -134,6 +134,7 @@
             this.TextBoxName.Name = "TextBoxName";
             this.TextBoxName.Size = new System.Drawing.Size(341, 20);
             this.TextBoxName.TabIndex = 27;
+            this.TextBoxName.TextChanged += new System.EventHandler(this.TextBoxName_TextChanged);
             // 
             // ComboBoxCategory
             // 
@@ -142,7 +143,7 @@
             this.ComboBoxCategory.Location = new System.Drawing.Point(76, 38);
             this.ComboBoxCategory.Name = "ComboBoxCategory";
             this.ComboBoxCategory.Size = new System.Drawing.Size(111, 21);
-            this.ComboBoxCategory.TabIndex = 29;
+            this.ComboBoxCategory.TabIndex = 28;
             // 
             // AddEditNoteForm
             // 
@@ -150,7 +151,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(429, 464);
+            this.ClientSize = new System.Drawing.Size(429, 465);
             this.Controls.Add(this.ChangedDateNote);
             this.Controls.Add(this.CreatedDateNote);
             this.Controls.Add(this.Changed);

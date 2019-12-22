@@ -75,7 +75,7 @@
             this.приветToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.приветToolStripMenuItem.Name = "приветToolStripMenuItem";
-            this.приветToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
+            this.приветToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.приветToolStripMenuItem.Text = "File";
             // 
             // exitToolStripMenuItem
@@ -92,27 +92,27 @@
             this.editNoteToolStripMenuItem,
             this.removeNoteToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // addNoteToolStripMenuItem
             // 
             this.addNoteToolStripMenuItem.Name = "addNoteToolStripMenuItem";
-            this.addNoteToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.addNoteToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.addNoteToolStripMenuItem.Text = "Add Note";
             this.addNoteToolStripMenuItem.Click += new System.EventHandler(this.addNoteToolStripMenuItem_Click);
             // 
             // editNoteToolStripMenuItem
             // 
             this.editNoteToolStripMenuItem.Name = "editNoteToolStripMenuItem";
-            this.editNoteToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.editNoteToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.editNoteToolStripMenuItem.Text = "Edit Note";
             this.editNoteToolStripMenuItem.Click += new System.EventHandler(this.editNoteToolStripMenuItem_Click);
             // 
             // removeNoteToolStripMenuItem
             // 
             this.removeNoteToolStripMenuItem.Name = "removeNoteToolStripMenuItem";
-            this.removeNoteToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.removeNoteToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.removeNoteToolStripMenuItem.Text = "Remove Note";
             this.removeNoteToolStripMenuItem.Click += new System.EventHandler(this.removeNoteToolStripMenuItem_Click);
             // 
@@ -121,13 +121,13 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -142,13 +142,12 @@
             // 
             // NoteListBox
             // 
-            this.NoteListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NoteListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.NoteListBox.FormattingEnabled = true;
             this.NoteListBox.Location = new System.Drawing.Point(12, 124);
             this.NoteListBox.Name = "NoteListBox";
-            this.NoteListBox.Size = new System.Drawing.Size(201, 290);
+            this.NoteListBox.Size = new System.Drawing.Size(201, 303);
             this.NoteListBox.TabIndex = 35;
             this.NoteListBox.SelectedIndexChanged += new System.EventHandler(this.NoteListBox_SelectedIndexChanged);
             // 
@@ -166,7 +165,7 @@
             // 
             this.pictureBoxEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBoxEdit.Image = global::NoteApp.UI.Properties.Resources.edit;
-            this.pictureBoxEdit.Location = new System.Drawing.Point(42, 420);
+            this.pictureBoxEdit.Location = new System.Drawing.Point(42, 438);
             this.pictureBoxEdit.Name = "pictureBoxEdit";
             this.pictureBoxEdit.Size = new System.Drawing.Size(23, 23);
             this.pictureBoxEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -178,7 +177,7 @@
             // 
             this.pictureBoxAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBoxAdd.Image = global::NoteApp.UI.Properties.Resources.add;
-            this.pictureBoxAdd.Location = new System.Drawing.Point(12, 420);
+            this.pictureBoxAdd.Location = new System.Drawing.Point(12, 438);
             this.pictureBoxAdd.Name = "pictureBoxAdd";
             this.pictureBoxAdd.Size = new System.Drawing.Size(24, 23);
             this.pictureBoxAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -190,7 +189,7 @@
             // 
             this.pictureBoxRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBoxRemove.Image = global::NoteApp.UI.Properties.Resources.del;
-            this.pictureBoxRemove.Location = new System.Drawing.Point(71, 420);
+            this.pictureBoxRemove.Location = new System.Drawing.Point(71, 438);
             this.pictureBoxRemove.Name = "pictureBoxRemove";
             this.pictureBoxRemove.Size = new System.Drawing.Size(26, 23);
             this.pictureBoxRemove.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -225,7 +224,7 @@
             this.NoteTextBox.Location = new System.Drawing.Point(222, 124);
             this.NoteTextBox.Multiline = true;
             this.NoteTextBox.Name = "NoteTextBox";
-            this.NoteTextBox.Size = new System.Drawing.Size(390, 290);
+            this.NoteTextBox.Size = new System.Drawing.Size(390, 337);
             this.NoteTextBox.TabIndex = 48;
             this.NoteTextBox.Text = "Text";
             // 

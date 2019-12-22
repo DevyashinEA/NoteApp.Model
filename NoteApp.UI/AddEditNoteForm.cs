@@ -23,16 +23,32 @@ namespace NoteApp.UI
             TextBoxName.Text = NewNote.Name;
             TextBoxNote.Text = NewNote.Text;
             ComboBoxCategory.SelectedItem = NewNote.Category;
+            CreatedDateNote.Value = NewNote.DateCreate;
+            ChangedDateNote.Value = NewNote.DateChange;
         }
         /// <summary>
         /// Кнопка ОК.
         /// </summary>
         private void OK_Click(object sender, EventArgs e)
         {
-            NewNote.Name=TextBoxName.Text;
-            NewNote.Text = TextBoxNote.Text;
-            NewNote.Category = (NoteCategory)ComboBoxCategory.SelectedItem;
-            Close();
+            try
+            {
+                NewNote.Name = TextBoxName.Text;
+                NewNote.Text = TextBoxNote.Text;
+                NewNote.Category = (NoteCategory)ComboBoxCategory.SelectedItem;
+                Close();
+            }
+            catch
+            {
+                DialogResult result = MessageBox.Show(
+                "Длина имени не может быть больше 50 символов",
+                NewNote.Name,
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1,
+                MessageBoxOptions.DefaultDesktopOnly);
+                NewNote.Name = "Non correct";
+            }
         }
         /// <summary>
         /// Кнопка Cancel.
@@ -41,6 +57,21 @@ namespace NoteApp.UI
         {
             NewNote = null;
             Close();
+        }
+
+        private void TextBoxName_TextChanged(object sender, EventArgs e)
+        {
+            if(TextBoxName.TextLength>50)
+            {
+                DialogResult result = MessageBox.Show(
+                "Длина имени не может быть больше 50 символов",
+                NewNote.Name,
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1,
+                MessageBoxOptions.DefaultDesktopOnly);
+                TextBoxName.Text = "Non correct";
+            }
         }
     }
 }

@@ -105,8 +105,8 @@ namespace NoteApp.UI
             {
                 selectedNote = GetSelectedNote();
                 CurrentCategoryNote.Text = selectedNote.Category.ToString();
-                CreateDateLabel.Text = selectedNote.DateCreate.ToString();
-                ModifiedDateLabel.Text = selectedNote.DateChange.ToString();
+                CreateDateLabel.Value = selectedNote.DateCreate;
+                ModifiedDateLabel.Value = selectedNote.DateChange;
                 NoteTextBox.Text = "";
                 NoteTextBox.Text=selectedNote.Text;
                 NameLabel.Text = selectedNote.Name;
