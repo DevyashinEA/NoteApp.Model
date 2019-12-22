@@ -86,6 +86,8 @@ namespace NoteApp.Model
             }
             private set
             {
+                if (value.Year < 2014)
+                    value = DateTime.Now;
                 _dateCreate = value;
             }
         }
@@ -101,6 +103,8 @@ namespace NoteApp.Model
             }
             private set
             {
+                if (value.Year < 2014)
+                    value = DateTime.Now;
                 _dateChange = value;
             }
         }
