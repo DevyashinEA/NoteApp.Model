@@ -16,9 +16,9 @@ DefaultDirName={autopf}\{#MyAppName}
 DisableProgramGroupPage=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
-OutputDir=C:\Users\Администратор\Desktop\NoteApp.Model\InstallScripts\installers
+OutputDir=\installers
 OutputBaseFilename=SetupNoteApp
-SetupIconFile=C:\Users\Администратор\Desktop\NoteApp.Model\NoteApp.UI\notepad_bloc_notes_15548.ico
+SetupIconFile=notepad_bloc_notes_15548.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -30,8 +30,8 @@ Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Users\Администратор\Desktop\NoteApp.Model\InstallScripts\Release\NoteApp.UI.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Администратор\Desktop\NoteApp.Model\InstallScripts\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "Release\NoteApp.UI.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]

@@ -9,6 +9,7 @@ namespace NoteApp.UI
     public partial class AddEditNoteForm : Form
     {
         public Note NewNote;
+
         /// <summary>
         ///Инициализация формы
         /// </summary>
@@ -26,6 +27,7 @@ namespace NoteApp.UI
             CreatedDateNote.Value = NewNote.DateCreate;
             ChangedDateNote.Value = NewNote.DateChange;
         }
+
         /// <summary>
         /// Кнопка ОК.
         /// </summary>
@@ -50,6 +52,7 @@ namespace NoteApp.UI
                 NewNote.Name = "Non correct";
             }
         }
+
         /// <summary>
         /// Кнопка Cancel.
         /// </summary>
@@ -58,7 +61,9 @@ namespace NoteApp.UI
             NewNote = null;
             Close();
         }
-
+         /// <summary>
+         /// Вывод сообщения об ошибке, при вводе имени больше 50
+         /// </summary>
         private void TextBoxName_TextChanged(object sender, EventArgs e)
         {
             if(TextBoxName.TextLength>50)
